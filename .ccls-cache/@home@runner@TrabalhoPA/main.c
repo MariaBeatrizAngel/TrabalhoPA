@@ -6,7 +6,10 @@ int bin_to_dec(long long);
 int main(void) {
   long long b1, b2, respb;
   int d1, d2, respd;
+  char op;
 
+  printf("Entre com a operação(+. -, /, *) : ");
+  scanf(" %c", &op);
   printf("Entre com o primeiro número binário: ");
   scanf("%lld", &b1);
   printf("Entre com o segundo número binário: ");
@@ -15,9 +18,23 @@ int main(void) {
   d1 = bin_to_dec(b1);
   d2 = bin_to_dec(b2);
 
-  respd = d1 + d2;
+  switch (op){
+    case '+':
+      respd = d1 + d2;
+      break;
+    case '-':
+      respd = d1 - d2;
+      break;
+    case '/':
+      respd = d1 / d2;
+      break;
+    case '*':
+      respd = d1 * d2;
+      break;
+    }
+  
   respb = dec_to_bin(respd);
-  printf("Resultado= %lld", respb);
+  printf("Resultado = %lld", respb);
 }
 
 int bin_to_dec(long long n) {

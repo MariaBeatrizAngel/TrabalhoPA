@@ -4,15 +4,20 @@ long long dec_to_bin(int);
 int bin_to_dec(long long);
 
 int main(void) {
+  long long b1, b2, respb;
+  int d1, d2, respd;
 
-  long long bin;
-  int dec;
+  printf("Entre com o primeiro número binário: ");
+  scanf("%lld", &b1);
+  printf("Entre com o segundo número binário: ");
+  scanf("%lld", &b2);
 
-  printf("Entre com o número decimal: ");
-  scanf("%d", &dec);
+  d1 = bin_to_dec(b1);
+  d2 = bin_to_dec(b2);
 
-  bin = dec_to_bin(dec);
-  printf(" %lld", bin);
+  respd = d1 + d2;
+  respb = dec_to_bin(respd);
+  printf("Resultado= %lld", respb);
 }
 
 int bin_to_dec(long long n) {

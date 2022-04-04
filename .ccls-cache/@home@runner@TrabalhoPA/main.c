@@ -36,10 +36,11 @@ int main(void) {
     }
   
     respb = dec_to_bin(respd);
-    printf("\nResposta = %lld \n",respb);
+    printf("\nResposta em binário = %lld \n",respb);
     printf("-------- \n\n");
     printf("Digite 1 para continuar\nOu qualquer tecla para encerrar: ");
     scanf("%d", &prog);
+    system("cls || clear");
   }
 }
 
